@@ -32,7 +32,7 @@
 - Spring Boot
 - HTML, CSS, JS
 - MySQL
-- JDK 11.0.15
+- JDK 17.0.10
 - YAML
 - JSON
 - REST:API
@@ -44,33 +44,33 @@
 - POSTMAN
 - Lombok
 - Boot pay
-- Naver OAuth
 - Kakao OAuth
-- Cool SMS api 
+- Cool SMS api
+- Java Mail api
+- Google SMTP
 
  ## 📌 프로젝트에서 맡은 역할 
 - 프로젝트 팀장, 서비스 기획 및 전반적인 구성
 - DB 및 컨트롤러 설계 
-- 프론트 업무 : 회원가입, 로그인, 아이디 찾기, 비밀번호 찾기 
-- 백엔드 업무 : 관리자 페이지
-- AWS 서버 배포 <a href="http://www.jimcarry.site/">jimcarry</a>
+- 프론트 업무 : 영상-모집, 글-모집, 문의사항 작성페이지, 모집 상세 및 목록 반응형 웹페이지 
+- 백엔드 업무 : 메인 홈페이지, 영상-모집, 글-모집, 알림, 카카오 로그인, 회원가입
+- AWS 서버 배포 <a href="http://www.ggumteo.site/">GGumteo</a>
 
-### 퍼블리싱 작업(회원가입/로그인) - <a href="https://github.com/code-hyun/JimCarry/wiki/맡은-기능-소개--(퍼블리싱)" > 상세보기 - WIKI 이동</a>
- 1. 회원가입 <br>
- 2. 로그인 <br>
- 3. ID찾기, PW찾기 <br>
+### 퍼블리싱 작업(회원가입/로그인) - <a href="https://github.com/code-hyun/ggumteo/wiki/맡은-기능-소개--(퍼블리싱)" > 상세보기 - WIKI 이동</a>
+ 1. 모집페이지 <br>
+ 2. 문의사항 작성 페이지 <br>
+ 3. 모집 상세 및 목록 반응형 웹페이지 <br>
 
-### 백엔드 작업(관리자 페이지) - <a href="https://github.com/code-hyun/JimCarry/wiki/맡은-기능-소개-(백엔드)" >상세보기 - WIKI 이동</a>
-#### 관리자계정 : admin/1234
- 1. 회원 관리 (목록, 상세보기, 검색, 삭제) <br>
- 2. 창고 관리 (목록, 상세보기/수정, 검색, 삭제)<br>
- 3. 문의 관리 (목록, 상세보기/수정, 검색, 삭제)<br>
- 4. 리뷰 관리 (목록, 상세보기/수정, 검색, 삭제)<br>
- 5. 결제 관리 (목록, 상세보기, 검색, 삭제)<br>
- 6. 공지 관리 (목록, 작성, 상세보기/수정, 검색, 삭제)<br>
+### 백엔드 작업(관리자 페이지) - <a href="https://github.com/code-hyun/ggumteo/wiki/맡은-기능-소개-(백엔드)" >상세보기 - WIKI 이동</a>
+ 1. 영상 모집 (목록, 상세보기, 작성/수정, 검색, 신청하기) <br>
+ 2. 글 모집 (목록, 상세보기, 작성/수정, 검색, 신청하기)<br>
+ 3. 헤더 알림 (알림)<br>
+ 4. 메인 홈페이지 (통계, 서비스 소개)<br>
+ 5. 카카오 로그인 (상세보기)<br>
+ 6. 회원가입 (작성)<br>
 
 ## ✨ ERD
-![짐캐리 포토폴리오 drawio](https://user-images.githubusercontent.com/122762287/233322002-5be1e3da-90ba-4e2a-ab88-38ad95b48aaf.png)
+![꿈터터 포토폴리오 drawio](https://user-images.githubusercontent.com/122762287/233322002-5be1e3da-90ba-4e2a-ab88-38ad95b48aaf.png)
 
 ## ✨ 프로젝트에서 느낀점
  : 개발을 처음 배웠고 실력적으로 많이 뎌딘 상태에서 팀장이라는 직책을 맡아 프로젝트를 진행하는 것이 가장 큰 어려웠던것 같습니다. 전체적이 흐름을 파악하고 있어야하고, 개발 뿐만 아니라 기획과 문서까지 전체적으로 팀장이 결정을 해야하는 것에 안좋은 선택이지 않을까, 좋은 방향성을 제시하는 걸까 하는 큰 부담이 있었습니다.
