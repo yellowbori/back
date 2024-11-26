@@ -66,7 +66,7 @@
  2. 문의사항 작성 페이지 <br>
  3. 모집 상세 및 목록 반응형 웹페이지 <br>
 
-### 백엔드 작업(관리자 페이지) - <a href="https://github.com/code-hyun/ggumteo/wiki/맡은-기능-소개-(백엔드)" >상세보기 - WIKI 이동</a>
+### 백엔드 작업(관리자 페이지) - <a href="[https://github.com/code-hyun/ggumteo/wiki/맡은-기능-소개-(백엔드)](https://github.com/ChoiDh05/GGumteo.wiki.git)" >상세보기 - WIKI 이동</a>
  1. 영상 모집 (목록, 상세보기, 작성/수정, 검색, 신청하기) <br>
  2. 글 모집 (목록, 상세보기, 작성/수정, 검색, 신청하기)<br>
  3. 헤더 알림 (알림)<br>
