@@ -61,12 +61,12 @@
 - 백엔드 업무 : 메인 홈페이지, 영상-모집, 글-모집, 알림, 카카오 로그인, 회원가입
 - AWS 서버 배포 <a href="http://www.ggumteo.site/">GGumteo</a>
 
-### 퍼블리싱 작업(회원가입/로그인) - <a href="https://github.com/code-hyun/ggumteo/wiki/맡은-기능-소개--(퍼블리싱)" > 상세보기 - WIKI 이동</a>
+### 퍼블리싱 작업 - <a href="https://github.com/ChoiDh05/ggumteo/wiki/맡은-기능-소개--(퍼블리싱)" > 상세보기 - WIKI 이동</a>
  1. 모집페이지 <br>
  2. 문의사항 작성 페이지 <br>
  3. 모집 상세 및 목록 반응형 웹페이지 <br>
 
-### 백엔드 작업(관리자 페이지) - <a href="https://github.com/ChoiDh05/GGumteo/wiki/담당한-기능-소개(백엔드)" >상세보기 - WIKI 이동</a>
+### 백엔드 작업 - <a href="https://github.com/ChoiDh05/GGumteo/wiki/담당한-기능-소개(백엔드)" >상세보기 - WIKI 이동</a>
  1. 영상 모집 (목록, 상세보기, 작성/수정, 검색, 신청하기) <br>
  2. 글 모집 (목록, 상세보기, 작성/수정, 검색, 신청하기)<br>
  3. 헤더 알림 (알림)<br>
