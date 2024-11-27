@@ -41,7 +41,7 @@ public class AuditionApplicationFileServiceImpl implements AuditionApplicationFi
     // AuditionApplicationFileServiceImpl 코드 수정
     @Override
     public FileVO saveFile(MultipartFile file) {
-        String rootPath = "C:/upload/" + getPath() + "/";
+        String rootPath = "/upload/" + getPath() + "/";
         File directory = new File(rootPath);
         if (!directory.exists()) {
             directory.mkdirs();
