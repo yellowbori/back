@@ -41,7 +41,7 @@ public class AuditionApplicationFileServiceImpl implements AuditionApplicationFi
     // AuditionApplicationFileServiceImpl 코드 수정
     @Override
     public FileVO saveFile(MultipartFile file) {
-        String rootPath = "C:/upload/" + getPath() + "/";
+        String rootPath = "/home/ubuntu/upload/" + getPath() + "/";
         File directory = new File(rootPath);
         if (!directory.exists()) {
             directory.mkdirs();
@@ -78,7 +78,7 @@ public class AuditionApplicationFileServiceImpl implements AuditionApplicationFi
 
     @Override
     public byte[] getFileData(String fileName) {
-        String rootPath = "C:/upload/";
+        String rootPath = "/home/ubuntu/upload/";
         File file = new File(rootPath + fileName);
         try {
             if (file.exists()) {
@@ -95,7 +95,7 @@ public class AuditionApplicationFileServiceImpl implements AuditionApplicationFi
     public List<AuditionApplicationFileDTO> uploadFile(List<MultipartFile> files) throws IOException {
         List<AuditionApplicationFileDTO> fileDTOs = new ArrayList<>();
 
-        String rootPath = "C:/upload/" + getPath();
+        String rootPath = "/home/ubuntu/upload/" + getPath();
         File directory = new File(rootPath);
         if (!directory.exists()) {
             directory.mkdirs();

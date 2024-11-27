@@ -30,13 +30,13 @@ public class KakaoService {
             // 고정
             stringBuilder.append("grant_type=authorization_code");
             // 앱키 -> REST API 개인 키
-            stringBuilder.append("&client_id=4759c67a8c35dab21cbdb77f0bb159ad");
+            stringBuilder.append("&client_id=2a0ff6f19b821e9c096db3b9b1d7bb4d");
             // 카카오 로그인 -> Redirect URI -> 요청 주소
-            stringBuilder.append("&redirect_uri=http://localhost:10000/kakao/login");
+            stringBuilder.append("&redirect_uri=http://13.125.161.96:10000/kakao/login");
             // getKakaoAccessToken 에서 받은 code
             stringBuilder.append("&code=" + code);
             // 제품설정 보안 -> Client Secret -> 개인코드
-            stringBuilder.append("&client_secret=et1SxUxPAgjDnLShd0XEZZaOILYczIPI");
+            stringBuilder.append("&client_secret=OSJyc38K5boDQhIuefvkUKxMjhEaUJD6");
 
             // 로그로 요청 데이터 확인
             log.info("Kakao token request data: " + stringBuilder.toString());
