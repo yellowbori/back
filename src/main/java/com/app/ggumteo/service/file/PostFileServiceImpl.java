@@ -41,7 +41,7 @@ public class PostFileServiceImpl implements PostFileService {
 
     @Override
     public FileVO saveFile(MultipartFile file) {
-        String rootPath = "C:/upload/" + getPath() + "/";
+        String rootPath = "/home/ubuntu/upload/" + getPath() + "/";
         File directory = new File(rootPath);
         if (!directory.exists()) {
             directory.mkdirs();
@@ -82,7 +82,7 @@ public class PostFileServiceImpl implements PostFileService {
 
     @Override
     public byte[] getFileData(String fileName) {
-        String rootPath = "C:/upload/";
+        String rootPath = "/home/ubuntu/upload/";
         File file = new File(rootPath + fileName);
         try {
             if (file.exists()) {
@@ -98,7 +98,7 @@ public class PostFileServiceImpl implements PostFileService {
     public List<PostFileDTO> uploadFile(List<MultipartFile> files) throws IOException {
         List<PostFileDTO> fileDTOs = new ArrayList<>();
 
-        String rootPath = "C:/upload/" + getPath();
+        String rootPath = "/home/ubuntu/upload/" + getPath();
         File directory = new File(rootPath);
         if (!directory.exists()) {
             directory.mkdirs();

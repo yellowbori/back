@@ -201,7 +201,7 @@ public class VideoAuditionController {
     @GetMapping("display")
     @ResponseBody
     public byte[] display(@RequestParam("fileName") String fileName) throws IOException {
-        File file = new File("C:/upload", fileName);
+        File file = new File("/home/ubuntu/upload", fileName);
 
         if (!file.exists()) {
             throw new FileNotFoundException("파일을 찾을 수 없습니다: " + fileName);

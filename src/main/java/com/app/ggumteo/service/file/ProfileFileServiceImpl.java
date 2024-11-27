@@ -34,7 +34,7 @@ public class ProfileFileServiceImpl implements ProfileFileService {
         fileVO.setFileName(file.getOriginalFilename());
         fileVO.setFileSize(String.valueOf(file.getSize()));
         fileVO.setFileType(file.getContentType());
-        fileVO.setFilePath("C:/ggumteofile/" + UUID.randomUUID().toString() + "_" + file.getOriginalFilename());
+        fileVO.setFilePath("/home/ubuntu/ggumteofile/" + UUID.randomUUID().toString() + "_" + file.getOriginalFilename());
 
         // 파일 저장
         File saveLocation = new File(fileVO.getFilePath());

@@ -79,7 +79,7 @@ public class WorkServiceImpl implements WorkService {
             FileVO thumbnailFileVO = new FileVO();
             thumbnailFileVO.setFileName(thumbnailFileName);
             thumbnailFileVO.setFilePath(getPath());
-            File file = new File("C:/upload/" + getPath() + "/" + thumbnailFileName);
+            File file = new File("/home/ubuntu/upload/" + getPath() + "/" + thumbnailFileName);
             thumbnailFileVO.setFileSize(String.valueOf(file.length()));
 
             try {
@@ -107,7 +107,7 @@ public class WorkServiceImpl implements WorkService {
                 FileVO fileVO = new FileVO();
                 fileVO.setFileName(fileName);
                 fileVO.setFilePath(getPath());
-                File file = new File("C:/upload/" + getPath() + "/" + fileName);
+                File file = new File("/home/ubuntu/upload/" + getPath() + "/" + fileName);
                 fileVO.setFileSize(String.valueOf(file.length()));
 
                 try {
@@ -173,7 +173,7 @@ public class WorkServiceImpl implements WorkService {
             FileVO thumbnailFileVO = new FileVO();
             thumbnailFileVO.setFileName(workDTO.getThumbnailFileName());
             thumbnailFileVO.setFilePath(getPath());
-            File file = new File("C:/upload/" + getPath() + "/" + workDTO.getThumbnailFileName());
+            File file = new File("/home/ubuntu/upload/" + getPath() + "/" + workDTO.getThumbnailFileName());
             thumbnailFileVO.setFileSize(String.valueOf(file.length()));
 
             try {
@@ -207,7 +207,7 @@ public class WorkServiceImpl implements WorkService {
                     FileVO newFileVO = new FileVO();
                     newFileVO.setFileName(fileName);
                     newFileVO.setFilePath(getPath());
-                    File file = new File("C:/upload/" + getPath() + "/" + fileName);
+                    File file = new File("/home/ubuntu/upload/" + getPath() + "/" + fileName);
                     newFileVO.setFileSize(String.valueOf(file.length()));
 
                     try {
