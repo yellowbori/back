@@ -32,7 +32,7 @@ public class KakaoService {
             // 앱키 -> REST API 개인 키
             stringBuilder.append("&client_id=2a0ff6f19b821e9c096db3b9b1d7bb4d");
             // 카카오 로그인 -> Redirect URI -> 요청 주소
-            stringBuilder.append("&redirect_uri=http://13.125.161.96:10000/kakao/login");
+            stringBuilder.append("&redirect_uri=http://ggumteo.site/kakao/login");
             // getKakaoAccessToken 에서 받은 code
             stringBuilder.append("&code=" + code);
             // 제품설정 보안 -> Client Secret -> 개인코드

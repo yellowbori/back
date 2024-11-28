@@ -90,7 +90,7 @@ public class TextAuditionController {
 
     @GetMapping("write")
     public String goToWritePage() {
-        return "/audition/text/write";
+        return "audition/text/write";
     }
 
     @PostMapping("write")
@@ -134,7 +134,7 @@ public class TextAuditionController {
             return "/audition/text/modify";
         } else {
             model.addAttribute("error", "해당 게시글을 찾을 수 없습니다.");
-            return "/audition/text/error";
+            return "audition/text/error";
         }
     }
 
@@ -191,7 +191,7 @@ public class TextAuditionController {
         model.addAttribute("pagination", pagination);
         model.addAttribute("totalSearchAudition", totalSearchAudition);
 
-        return "/audition/text/list";
+        return "audition/text/list";
     }
 
     @GetMapping("display")
@@ -217,7 +217,7 @@ public class TextAuditionController {
         model.addAttribute("audition", audition);
         model.addAttribute("postFiles", postFiles);
 
-        return "/audition/text/detail";
+        return "audition/text/detail";
     }
 
     @GetMapping("/application/{id}")
@@ -235,7 +235,7 @@ public class TextAuditionController {
         AuditionDTO audition = auditionService.findAuditionById(id);
         if (audition == null) {
             model.addAttribute("error", "해당 오디션 정보를 찾을 수 없습니다.");
-            return "/error"; // 오류 페이지로 이동
+            return "error"; // 오류 페이지로 이동
         }
 
         // 모델에 필요한 데이터 추가
