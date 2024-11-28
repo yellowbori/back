@@ -14,7 +14,7 @@ public class MemberController {
 
     private final MainService mainService;
 
-    @GetMapping("/main")
+    @GetMapping({"/", "/main"})
     public String mainPage(Model model) {
         int totalMembers = mainService.getTotalMembers();
         int totalWorks = mainService.getTotalWorks();

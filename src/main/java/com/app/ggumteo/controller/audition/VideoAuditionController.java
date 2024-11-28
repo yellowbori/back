@@ -93,7 +93,7 @@ public class VideoAuditionController {
 
     @GetMapping("write")
     public String goToWritePage() {
-        return "/audition/video/write";
+        return "audition/video/write";
     }
 
     @PostMapping("write")
@@ -136,7 +136,7 @@ public class VideoAuditionController {
             return "/audition/video/modify";
         } else {
             model.addAttribute("error", "해당 게시글을 찾을 수 없습니다.");
-            return "/audition/video/error";
+            return "audition/video/error";
         }
     }
 
@@ -195,7 +195,7 @@ public class VideoAuditionController {
         model.addAttribute("totalSearchAudition", totalSearchAudition);
         model.addAttribute("keyword", keyword);
 
-        return "/audition/video/list";
+        return "audition/video/list";
     }
 
     @GetMapping("display")
@@ -224,7 +224,7 @@ public class VideoAuditionController {
         model.addAttribute("postFiles", postFiles);
         model.addAttribute("applicantCount", applicantCount);
 
-        return "/audition/video/detail";
+        return "audition/video/detail";
     }
 
     @GetMapping("/application/{id}")
