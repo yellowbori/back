@@ -1,0 +1,23 @@
+package com.app.ggumteo.service.reply;
+
+import com.app.ggumteo.domain.reply.MyReviewsDTO;
+import com.app.ggumteo.repository.reply.MyReviewsDAO;
+import lombok.RequiredArgsConstructor;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+
+import java.util.List;
+
+@Service
+@Transactional
+@RequiredArgsConstructor
+public class MyReviewsServiceImpl implements MyReviewsService {
+
+    private final MyReviewsDAO myReviewsDAO;
+
+    @Override
+    public List<MyReviewsDTO> selectAllById(Long memberId) {
+        return myReviewsDAO.selectAllById(memberId);
+    }
+}
+
