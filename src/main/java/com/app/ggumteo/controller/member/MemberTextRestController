@@ -1,0 +1,39 @@
+package com.app.ggumteo.controller.member;
+
+import com.app.ggumteo.domain.member.MemberVO;
+import com.app.ggumteo.domain.reply.MyReviewsDTO;
+import com.app.ggumteo.service.myPage.MyPageService;
+import com.app.ggumteo.service.reply.MyReviewsService;
+import jakarta.servlet.http.HttpSession;
+import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
+
+    @Controller
+    @Slf4j
+    @RequiredArgsConstructor
+    public class MemberTextRestController {
+
+        private final MyReviewsService myReviewsService;
+        private final MyPageService myPageService;
+
+        @GetMapping("/member/text/my-page")
+        public String goToReadForm(Model model, HttpSession session) {
+            MemberVO memberVO = (MemberVO) session.getAttribute("member");
+            model.addAttribute("member", memberVO);
+
+            return "member/text-main";
+        }
+
+        @ResponseBody
+        @GetMapping("/replies/{memberId}")
+        public List<MyReviewsDTO> findById(
+                @PathVariable("memberId") Long memberId) {
+
+            return myReviewsService.selectAllById(memberId);
+        }
+    }
