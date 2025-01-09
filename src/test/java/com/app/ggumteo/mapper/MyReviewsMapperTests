@@ -1,0 +1,21 @@
+package com.app.ggumteo.mapper;
+
+import com.app.ggumteo.mapper.reply.MyReviewsMapper;
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.junit.jupiter.api.Test;
+
+@SpringBootTest
+@Slf4j
+public class MyReviewsMapperTests {
+
+    @Autowired
+    private MyReviewsMapper myReviewsMapper;
+
+    @Test
+    public void testSelectAllById() {
+        log.info("{}",myReviewsMapper.selectAllById(15L).toString());
+
+    }
+}
