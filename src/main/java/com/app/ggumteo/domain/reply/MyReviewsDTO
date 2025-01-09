@@ -1,0 +1,28 @@
+package com.app.ggumteo.domain.reply;
+
+import com.app.ggumteo.pagination.Pagination;
+import lombok.*;
+import org.springframework.stereotype.Component;
+
+@Component
+@Getter
+@Setter
+@ToString
+@EqualsAndHashCode(onlyExplicitlyIncluded = true)
+@NoArgsConstructor
+public class MyReviewsDTO {
+    private Long id;
+    private String replyContent;
+    private Long memberProfileId;
+    private Long workId;
+    private String createdDate;
+    private int star;
+    private String profileNickname;
+    private String profileImgUrl;// 카카오톡 프로필 이미지 url
+    private String memberId;
+
+}
+
+
+
+    
