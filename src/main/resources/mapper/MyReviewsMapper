@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.app.ggumteo.mapper.reply.MyReviewsMapper">
+
+    <!-- 마이페이지 - 내 단 리뷰 총갯수 -->
+    <select id="selectCountByMemberId">
+        select count(*) from tbl_reply r
+                                 join tbl_member_profile mp on mp.id = r.member_profile_id
+                                 join tbl_work w on w.id = r.work_id
+                                 join tbl_post p on p.id = w.id and p.post_type = #{postType}
+                                 join tbl_member m on m.id = mp.member_id and m.id = #{memberId};
+    </select>
+
+    <select id="selectAllById" resultType="com.app.ggumteo.domain.reply.MyReviewsDTO">
+        SELECT
+            r.id,
+            r.reply_content,
+            r.created_date,
+            r.star,
+            r.member_profile_id,
+            r.work_id,
+            m.profile_img_url,
+            mp.profile_nickname,
+            mp.member_id,
+            MAX(p.post_content) AS post_content -- tbl_post 테이블의 중복 제거를 위한 집계 함수
+        FROM
+            tbl_reply r
+                LEFT JOIN tbl_member_profile mp ON r.member_profile_id = mp.id
+                LEFT JOIN tbl_member m ON mp.member_id = m.id
+                LEFT JOIN tbl_post p ON mp.id = p.member_profile_id -- tbl_post 테이블과의 Join
+        WHERE
+            mp.member_id = #{memberId} -- 조건 유지
+        GROUP BY
+            r.id,
+            r.reply_content,
+            r.created_date,
+            r.star,
+            r.member_profile_id,
+            r.work_id,
+            m.profile_img_url,
+            mp.profile_nickname,
+            mp.member_id
+        ORDER BY
+            r.created_date DESC
+        LIMIT 5
+    </select>
+
+    <delete id="delete">
+       delete from tbl_reply
+       where id = #{id}
+    </delete>
+
+</mapper>
